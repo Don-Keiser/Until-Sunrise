@@ -12,9 +12,8 @@ GameObject:
   - component: {fileID: 3205202954515557306}
   - component: {fileID: 2439014978257135924}
   - component: {fileID: 3533488759439861678}
-  - component: {fileID: 8044261200505599128}
   m_Layer: 0
-  m_Name: StoneThrower
+  m_Name: StoneThrower 1
   m_TagString: Ennemies
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -113,23 +112,6 @@ CapsuleCollider:
   m_Height: 1.7
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0.21}
---- !u!114 &8044261200505599128
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2076741875895555299}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a4fb5b77a2c78f445bcf77c16fcf0670, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  buildingsPrefab: {fileID: 2076741875895555299, guid: a8d4dc184e601d647a92fd0b2b9985cf,
-    type: 3}
-  layer:
-    serializedVersion: 2
-    m_Bits: 64
 --- !u!1 &2176528216777932954
 GameObject:
   m_ObjectHideFlags: 0
@@ -429,7 +411,7 @@ Transform:
   m_GameObject: {fileID: 6891617577259688994}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -0.045, y: 0.0024, z: 0.09}
+  m_LocalPosition: {x: -0.045, y: 0.024, z: 0.09}
   m_LocalScale: {x: 1.75, y: 0.01, z: 1.75}
   m_ConstrainProportionsScale: 0
   m_Children: []

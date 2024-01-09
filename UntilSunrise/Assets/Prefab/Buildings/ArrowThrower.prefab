@@ -95,6 +95,7 @@ GameObject:
   - component: {fileID: 3357079585938819383}
   - component: {fileID: 7984895073865560461}
   - component: {fileID: 1547259404651912018}
+  - component: {fileID: -7550490091664416625}
   m_Layer: 0
   m_Name: ArrowThrower
   m_TagString: Untagged
@@ -192,9 +193,29 @@ CapsuleCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.5000001
-  m_Height: 2
+  m_Height: 1.7
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0.21}
+--- !u!114 &-7550490091664416625
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4007323087407430116}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a4fb5b77a2c78f445bcf77c16fcf0670, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buildingsPrefab: {fileID: 4007323087407430116, guid: 3f467ab7e7f8cdd439f8380cadfb4b8d,
+    type: 3}
+  layer:
+    serializedVersion: 2
+    m_Bits: 64
+  test:
+    serializedVersion: 2
+    m_Bits: 64
 --- !u!1 &4170494026456530259
 GameObject:
   m_ObjectHideFlags: 0
@@ -386,7 +407,7 @@ Transform:
   m_GameObject: {fileID: 6108535038074147756}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.559, y: 0, z: -0}
+  m_LocalPosition: {x: -0.559, y: 0.391, z: -0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -611,7 +632,7 @@ Transform:
   m_GameObject: {fileID: 8197391323553374210}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0.7071068, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: -0.4, z: 0.09}
+  m_LocalPosition: {x: 0, y: 0.024, z: 0.09}
   m_LocalScale: {x: 1.7499995, y: 0.01, z: 1.7499995}
   m_ConstrainProportionsScale: 0
   m_Children: []
