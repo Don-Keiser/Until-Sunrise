@@ -5,6 +5,7 @@ using UnityEngine;
 public class US_EnemySpawner : MonoBehaviour
 {
     [SerializeField] Transform enemySpawn;
+    [SerializeField] float spawnInterval;
 
     private void Start()
     {
@@ -15,7 +16,7 @@ public class US_EnemySpawner : MonoBehaviour
     {
         while (true)
         {
-            yield return new WaitForSeconds(4f);
+            yield return new WaitForSeconds(spawnInterval);
 
             GameObject _enemy = US_EnemyPool.instance.GetPooledObject();
 

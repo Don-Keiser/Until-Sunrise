@@ -11,9 +11,10 @@ GameObject:
   - component: {fileID: 8823471834301329848}
   - component: {fileID: -1395322361269513917}
   - component: {fileID: -8824275616289220254}
-  m_Layer: 0
+  - component: {fileID: -4056872547000596622}
+  m_Layer: 9
   m_Name: Enemy
-  m_TagString: Untagged
+  m_TagString: Ennemies
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -56,7 +57,7 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 1.5, z: 1}
+  m_Size: {x: 1.5, y: 1.5, z: 1.5}
   m_Center: {x: 0, y: 0.75, z: 0}
 --- !u!114 &-8824275616289220254
 MonoBehaviour:
@@ -70,8 +71,35 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 771087c282fe3174590f28e7742acd09, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 2
+  speed: 4
   ePool: {fileID: 0}
+--- !u!54 &-4056872547000596622
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 587849923066791366}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &2349167322846627496
 GameObject:
   m_ObjectHideFlags: 0
@@ -84,7 +112,7 @@ GameObject:
   - component: {fileID: 6801775621181214785}
   - component: {fileID: 4004288714922513225}
   - component: {fileID: 2847508142519718968}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Head
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -189,7 +217,7 @@ GameObject:
   - component: {fileID: 8930807635536672941}
   - component: {fileID: 4275690214878445931}
   - component: {fileID: 3796520694848332381}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -294,7 +322,7 @@ GameObject:
   - component: {fileID: 7297884974208554046}
   - component: {fileID: 2626016022722553793}
   - component: {fileID: 1124022622546025527}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Fang 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -399,7 +427,7 @@ GameObject:
   - component: {fileID: 8140410038237911605}
   - component: {fileID: 4773626166333435615}
   - component: {fileID: 7656744038047135533}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Fang 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}

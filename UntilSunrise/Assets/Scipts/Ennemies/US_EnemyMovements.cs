@@ -15,9 +15,15 @@ public class US_EnemyMovements : MonoBehaviour
         ePool = FindAnyObjectByType<US_EnemyPool>();
     }
 
-    private void Start()
+    private void OnEnable()
     {
+        currentWaypointIndex = 0;
         StartCoroutine(EnemyMovement());
+    }
+
+    private void OnDisable()
+    {
+        StopCoroutine(EnemyMovement());
     }
 
     private IEnumerator EnemyMovement()
