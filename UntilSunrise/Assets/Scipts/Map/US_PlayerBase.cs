@@ -9,6 +9,7 @@ public class US_PlayerBase : MonoBehaviour
         if (other.gameObject.CompareTag("Ennemies"))
         {
             other.gameObject.SetActive(false);
+            US_BaseStats.instance.TakeDamage(US_EnemyStats.instance.eDamage);
         }
     }
 }
