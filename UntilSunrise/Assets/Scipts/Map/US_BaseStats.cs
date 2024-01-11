@@ -10,8 +10,6 @@ public class US_BaseStats : MonoBehaviour
     [SerializeField] float bCurrentHealth;
     [SerializeField] float bMaxHealth;
 
-    public bool baseIsDestroyed = false;
-
     private void Awake()
     {
         if (instance == null)
@@ -36,7 +34,7 @@ public class US_BaseStats : MonoBehaviour
     {
         if (bCurrentHealth == 0)
         {
-            baseIsDestroyed = true;
+            US_WinLoseManager.instance.hasLost = true;
             return;
         }
 

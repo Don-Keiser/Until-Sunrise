@@ -18,6 +18,7 @@ public class US_Chrono : MonoBehaviour
         else
         {
             chrono = 0;
+            US_WinLoseManager.instance.hasWon = true;
         }
     }
 
