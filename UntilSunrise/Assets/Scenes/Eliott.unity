@@ -499,7 +499,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemySpawn: {fileID: 1403507702}
-  spawnInterval: 0.1
+  spawnInterval: 2
 --- !u!1 &664465326
 GameObject:
   m_ObjectHideFlags: 0
@@ -1570,8 +1570,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53df0cfcec284b9498e6b398ec46c79f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  chrono: 300
   chronoText: {fileID: 1128733249}
+  chrono: 75
+  chronoIntensity1: 60
+  chronoIntensity2: 45
+  chronoIntensity3: 30
+  chronoIntensity4: 15
 --- !u!114 &1245959494
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2424,8 +2428,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 545b8e40014ee2a4fa85faa683af4c28, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bCurrentHealth: 100
-  bMaxHealth: 100
+  bCurrentHealth: 10000
+  bMaxHealth: 10000
   OnHealthChange:
     m_PersistentCalls:
       m_Calls:

@@ -4,8 +4,18 @@ using UnityEngine;
 
 public class US_EnemySpawner : MonoBehaviour
 {
+    public static US_EnemySpawner instance;
+
     [SerializeField] Transform enemySpawn;
-    [SerializeField] float spawnInterval;
+    public float spawnInterval;
+
+    private void Awake()
+    {
+        if (instance == null)
+        {
+            instance = this;
+        }
+    }
 
     private void Start()
     {
