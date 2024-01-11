@@ -6,17 +6,21 @@ public class US_Buildings : MonoBehaviour
     [SerializeField] private LayerMask layer;
 
     RaycastHit hit;
-    public LayerMask test;
+
+    GameManager manager;
+    private void Awake()
+    {
+        manager = FindAnyObjectByType<GameManager>();
+    }
 
     private void Start()
     {
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 
-        if (Physics.Raycast(ray, out hit, 100.0f, layer))
+        if (Physics.Raycast(ray, out hit, 50.0f, layer))
         {
             transform.position = hit.point;
         }
-        test = hit.collider.gameObject.layer;
     }
 
     private void Update()
@@ -28,9 +32,9 @@ public class US_Buildings : MonoBehaviour
             transform.position = hit.point;
         }
 
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0) && manager.CanBePlaced)
         {
-            Instantiate(buildingsPrefab, transform.position, transform.rotation);
+            Instantiate(buildingsPrefab, new Vector3(transform.position.x, transform.position.y + 0.5f, transform.position.z), transform.rotation);
             Destroy(gameObject);
         }
 

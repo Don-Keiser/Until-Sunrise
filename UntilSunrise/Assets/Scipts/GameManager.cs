@@ -1,30 +1,35 @@
 using UnityEngine;
-using static UnityEditor.Experimental.GraphView.GraphView;
 
 public class GameManager : MonoBehaviour
 {
-    [SerializeField] private LayerMask layer;
+    [SerializeField] private LayerMask mask;
 
+    Camera cam;
     RaycastHit hit;
+    GameObject go;
+
+    public bool CanBePlaced = false;
+    public bool ShouldBePlaced = false;
 
     private void Start()
     {
-        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-
-        if (Physics.Raycast(ray, out hit, 100.0f))
-        {
-
-        }
-
+        cam = Camera.main;
     }
 
     private void Update()
     {
-        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+        Ray ray = cam.ScreenPointToRay(Input.mousePosition);
 
-        if (Physics.Raycast(ray, out hit, 100.0f))
+        if (Physics.Raycast(ray, out hit, 100.0f, mask))
         {
-            Debug.Log(hit.collider.gameObject.layer);
+            go = hit.collider.gameObject;
+
+            if (go.layer == 6)
+            {
+                CanBePlaced = true;
+            }
+            else
+                CanBePlaced = false;
         }
     }
 }
