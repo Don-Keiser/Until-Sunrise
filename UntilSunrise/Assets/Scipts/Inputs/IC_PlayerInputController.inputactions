@@ -1,0 +1,34 @@
+{
+    "name": "IC_PlayerInputController",
+    "maps": [
+        {
+            "name": "BuildingsSelection",
+            "id": "59ec5a51-25b4-48ae-a441-66442e78b25d",
+            "actions": [
+                {
+                    "name": "Select",
+                    "type": "Button",
+                    "id": "abd957a7-8881-4480-a7f2-35d38b4df435",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "ba2722f1-1a52-4027-b9be-fdf8fabc1edd",
+                    "path": "<Mouse>/leftButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Select",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}

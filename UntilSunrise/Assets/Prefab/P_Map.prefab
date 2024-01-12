@@ -254,6 +254,8 @@ GameObject:
   - component: {fileID: 6808377604941192210}
   - component: {fileID: 4889474618992830030}
   - component: {fileID: 1450751240575633931}
+  - component: {fileID: 8536970181162149120}
+  - component: {fileID: 478382466073685726}
   m_Layer: 8
   m_Name: PlayerBase
   m_TagString: Untagged
@@ -347,6 +349,35 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &8536970181162149120
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 673544026812410821}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f168310bc954aa48b0c0ed22e4dda3d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &478382466073685726
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 673544026812410821}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 545b8e40014ee2a4fa85faa683af4c28, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bCurrentHealth: 100
+  bMaxHealth: 100
+  OnHealthChange:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &829751127013126184
 GameObject:
   m_ObjectHideFlags: 0
