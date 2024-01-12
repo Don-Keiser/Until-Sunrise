@@ -210,7 +210,7 @@ MonoBehaviour:
   buildingType: 1
   ennemiesLayer:
     serializedVersion: 2
-    m_Bits: 16
+    m_Bits: 512
   stoneDamage: 0
   stoneRange: 0
   stoneShootingSpeed: 0
