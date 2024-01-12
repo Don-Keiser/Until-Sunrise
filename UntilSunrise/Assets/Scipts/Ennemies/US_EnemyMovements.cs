@@ -23,6 +23,7 @@ public class US_EnemyMovements : MonoBehaviour
         currentWaypointIndex = 0;
         stats.eCurrentHealth = stats.eMaxHealth;
         stats.eIsDead = false;
+        stats.scoreAdded = false;
         StartCoroutine(EnemyMovement());
 
     }

@@ -1,8 +1,10 @@
+using TMPro;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
     [SerializeField] private LayerMask mask;
+    [SerializeField] private TextMeshProUGUI textMeshPro;
 
     Camera cam;
     RaycastHit hit;
@@ -10,6 +12,9 @@ public class GameManager : MonoBehaviour
 
     public bool CanBePlaced = false;
     public bool ShouldBePlaced = false;
+
+    [Header("Score")]
+    public int points = 0;
 
     private void Start()
     {
@@ -31,5 +36,7 @@ public class GameManager : MonoBehaviour
             else
                 CanBePlaced = false;
         }
+
+        textMeshPro.text = points.ToString();
     }
 }
