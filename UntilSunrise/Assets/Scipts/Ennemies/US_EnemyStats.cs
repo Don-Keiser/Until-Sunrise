@@ -5,6 +5,8 @@ using UnityEngine.Events;
 
 public class US_EnemyStats : MonoBehaviour
 {
+    private GameManager gameManager;
+
     public static US_EnemyStats instance;
 
     public int eDamage;
@@ -14,8 +16,12 @@ public class US_EnemyStats : MonoBehaviour
 
     public bool eIsDead = false;
 
+    public bool scoreAdded = false;
+
     private void Awake()
     {
+        gameManager = FindAnyObjectByType<GameManager>();
+
         if (instance == null)
         {
             instance = this;
@@ -37,6 +43,13 @@ public class US_EnemyStats : MonoBehaviour
         if (eCurrentHealth == 0)
         {
             eIsDead = true;
+
+            if (!scoreAdded)
+            {
+                gameManager.points += 2;
+                scoreAdded = true;
+            }
+
             gameObject.SetActive(false);
             return;
         }

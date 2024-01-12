@@ -231,9 +231,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   eDamage: 1
-  eCurrentHealth: 50
-  eMaxHealth: 50
+  eCurrentHealth: 125
+  eMaxHealth: 125
   eIsDead: 0
+  scoreAdded: 0
 --- !u!95 &-2219831574421339008
 Animator:
   serializedVersion: 5
