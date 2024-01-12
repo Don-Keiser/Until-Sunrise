@@ -9,8 +9,8 @@ public class US_EnemyStats : MonoBehaviour
 
     public int eDamage;
 
-    [SerializeField] float eCurrentHealth;
-    [SerializeField] float eMaxHealth;
+    public float eCurrentHealth;
+    public float eMaxHealth;
 
     public bool eIsDead = false;
 
@@ -37,6 +37,7 @@ public class US_EnemyStats : MonoBehaviour
         if (eCurrentHealth == 0)
         {
             eIsDead = true;
+            gameObject.SetActive(false);
             return;
         }
 

@@ -32,18 +32,16 @@ public class US_BuildingsController : MonoBehaviour
         if (buildingType == GameState.StoneThrower)
         {
             DetectionRange(stoneRange);
-            //MakeDamage(stoneDamage);
         }
         else if (buildingType == GameState.ArrowThrower)
         {
             DetectionRange(arrowRange);
-            //MakeDamage(arrowDamage)
         }
 
         if (currentEnnemy != null)
         {
             //look at
-            this.gameObject.transform.LookAt(currentEnnemy.transform.position);
+            gameObject.transform.LookAt(currentEnnemy.transform.position);
         }
     }
 
@@ -64,18 +62,17 @@ public class US_BuildingsController : MonoBehaviour
                 if (!hasShoot && currentEnnemy != null)
                 {
                     StartCoroutine(StoneShoot(eStats, stoneDamage));
-                    hasShoot = false;
-
+                   
                     if (eStats.eIsDead)
                     {
                         currentEnnemy = null;
                     }
-
                 }
 
                 if (currentEnnemy == null)
                 {
                     StopCoroutine(StoneShoot(eStats, stoneDamage));
+                    hasShoot = false;
                 }
 
             }
@@ -84,14 +81,20 @@ public class US_BuildingsController : MonoBehaviour
             {
                 US_EnemyStats eStats = currentEnnemy.GetComponent<US_EnemyStats>();
 
-                if (eStats.eIsDead)
+                if (!hasShoot && currentEnnemy != null)
                 {
-                    currentEnnemy = null;
+                    StartCoroutine(ArrowShoot(eStats, arrowDamage + 1));
+
+                    if (eStats.eIsDead)
+                    {
+                        currentEnnemy = null;
+                    }
                 }
 
                 if (currentEnnemy == null)
                 {
-                    StopCoroutine(ArrowShoot(eStats, arrowDamage));
+                    StopCoroutine(ArrowShoot(eStats, arrowDamage + 1));
+                    hasShoot = false;
                 }
             }
         }
@@ -104,15 +107,17 @@ public class US_BuildingsController : MonoBehaviour
 
     private IEnumerator StoneShoot(US_EnemyStats _eStats, int _damage)
     {
+        hasShoot = true;
         _eStats.TakeDamage(_damage);
         yield return new WaitForSeconds(stoneShootingSpeed);
-        hasShoot = true;
+        hasShoot = false;
     }
     private IEnumerator ArrowShoot(US_EnemyStats _eStats, int _damage)
     {
+        hasShoot = true;
         _eStats.TakeDamage(_damage);
         yield return new WaitForSeconds(arrowShootingSpeed);
-        hasShoot = true;
+        hasShoot = false;
     }
 
     public enum GameState

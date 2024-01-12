@@ -10,15 +10,21 @@ public class US_EnemyMovements : MonoBehaviour
 
     [SerializeField] US_EnemyPool ePool;
 
+    US_EnemyStats stats;
+
     private void Awake()
     {
         ePool = FindAnyObjectByType<US_EnemyPool>();
+        stats = GetComponent<US_EnemyStats>();
     }
 
     private void OnEnable()
     {
         currentWaypointIndex = 0;
+        stats.eCurrentHealth = stats.eMaxHealth;
+        stats.eIsDead = false;
         StartCoroutine(EnemyMovement());
+
     }
 
     private void OnDisable()
