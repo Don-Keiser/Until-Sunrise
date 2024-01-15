@@ -7,7 +7,7 @@ public class Menus : MonoBehaviour
 {
     public void Play()
     {
-        SceneManager.LoadScene("Eliott");
+        SceneManager.LoadScene("Logan");
         Time.timeScale = 1f;
     }
 
